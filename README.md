@@ -1,37 +1,8 @@
-## Welcome to Hyoungsik Nam's Pages
+# Welcome to Hyoungsik Nam's Pages
 
-### [Machine Learning](https://hsnam198.github.io/ML)
+## 1. [Machine Learning](https://hsnam198.github.io/ML)
 
-### [TFT Circuits](https://hsnam198.github.io/TFTCircuit)
+## 2. [TFT Circuits](https://hsnam198.github.io/TFTCircuit)
 
-### [Display Driving Schemes](https://hsnam198.github.io/DisplayDriving)
+## 3. [Display Driving Schemes](https://hsnam198.github.io/DisplayDriving)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/hsnam198/hsnam198.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
