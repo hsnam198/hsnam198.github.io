@@ -1,7 +1,7 @@
 ---
 layout: Jekyll
 title:  "GitHub Blog Settup"
-date:   2021-01-15 19:31:29 +0900
+date:   2021-01-14 19:31:29 +0900
 categories: jekyll
 ---
 
