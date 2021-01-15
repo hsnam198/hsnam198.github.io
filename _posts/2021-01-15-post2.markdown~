@@ -7,6 +7,7 @@ category: sample
 # post-sample
 > Hello!
 
+Test by Hyoungsik Nam
 This is code
 ```ruby
 print 'hello world'
