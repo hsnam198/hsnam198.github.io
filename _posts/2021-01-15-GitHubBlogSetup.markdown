@@ -1,5 +1,5 @@
 ---
-layout: Jekyll
+layout: post
 title:  "GitHub Blog Settup"
 date:   2021-01-14 19:31:29 +0900
 categories: jekyll
