@@ -5,15 +5,15 @@ date: 2021-01-26 19:20:23 +0900
 category: Sample
 ---
 # Chapter 1. Introduction
-> _Reinforcement learning (RL) is learning what to do so as to maximize the numerical reward signal._
+> \_Reinforcement learning (RL) is learning what to do so as to maximize the numerical reward signal.\_
 
 Two distinguishing features of RL = Trial-and-Error + Delayed Reward
 
-> _A learning agent must be able to sense the state of its environment to some extent and must be able to take actions that affect the state. The agent also must have a goal or goals relating to the state of the environment._
+> \_A learning agent must be able to sense the state of its environment to some extent and must be able to take actions that affect the state. The agent also must have a goal or goals relating to the state of the environment.\_
 
-_RL is different from SL_: No examples of desired behavior that are both correct and representative of all the situations.
+\_RL is different from SL\_: No examples of desired behavior that are both correct and representative of all the situations.
 
-_RL is different from UL_: Maximizing a reward signal but not uncovering the structure.
+\_RL is different from UL\_: Maximizing a reward signal but not uncovering the structure.
 
 Exploitation of experience vs Exploration of not selected actions
 
