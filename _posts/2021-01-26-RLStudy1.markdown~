@@ -1,0 +1,16 @@
+---
+layout: post
+title: Reinforcement Study #1
+date: 2021-01-26 19:20:23 +0900
+category: RL
+---
+# Reinforcement Learning: An Introduction by Sutton and Barto
+> Chapter 1 & 2 
+
+Learning agent must be able to 
+
+This is code
+
+```ruby
+print 'hell world'
+```
