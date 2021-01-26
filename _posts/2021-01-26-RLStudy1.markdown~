@@ -1,15 +1,25 @@
 ---
 layout: post
-title: Reinforcement Study #1
+title: Reinforcement Learning: An Introduction by Sutton and Barto 
+// Chapter 1 & 2
 date: 2021-01-26 19:20:23 +0900
 category: RL
 ---
-# Reinforcement Learning: An Introduction by Sutton and Barto
-> Chapter 1 & 2 
+# Chapter 1. Introduction
+> Reinforcement learning (RL) is learning what to do so as to maximize the numerical reward signal.
 
-Learning agent must be able to 
+Two distinguishing features of RL = Trial-and-Error + Delayed Reward
 
-This is code
+> A learning agent must be able to sense the state of its environment to some extent and must be able to take actions that affect the state. The agent also must have a goal or goals relating to the state of the environment. 
+
+RL is different from SL: No examples of desired behavior that are both correct and representative of all the situations.
+
+RL is different from UL: Maximizing a reward signal but not uncovering the structure.
+
+Exploitation of experience vs Exploration of not selected actions
+
+
+
 
 ```ruby
 print 'hell world'
