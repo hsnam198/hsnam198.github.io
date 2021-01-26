@@ -11,15 +11,17 @@ category: Study
 
 > _A learning agent must be able to sense the state of its environment to some extent and must be able to take actions that affect the state. The agent also must have a goal or goals relating to the state of the environment._
 
+```ruby
+state, reward = Environment(action)
+action = agent(state, reward, goal)
+```
+
 + _RL is different from SL_: No examples of desired behavior that are both correct and representative of all the situations.
 
 + _RL is different from UL_: Maximizing a reward signal but not uncovering the structure.
 
 + Exploitation of experience vs Exploration of not selected actions
 
++ RL's subelememts: _policy_, _reward_, _value function_, _model_ (_planning_)
 
 
-
-```ruby
-print 'hell world'
-```
