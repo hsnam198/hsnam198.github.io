@@ -1,7 +1,9 @@
 ---
 layout: post
-title: RL Chapter 1 and 2
+title: Reinforcement Learning Study 1
+shorttitle: Chapter 1 and 2
 date: 2021-01-26 19:20:23 +0900
+html header: <script type="text/javascript" scr="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=Tex-AMS-MML_HTMLorMML"></script>
 category: Study 
 ---
 # Chapter 1. Introduction
@@ -30,6 +32,4 @@ action = agent(state, reward, goal)
 
 + Expected Reward ($$q_{\*}$$)
 
-$
-q~\*~(a)=E[R~t~|A~t~=a]
-$
+$$ q_{\*}(a)=E[R_t|A_t=a] $$
