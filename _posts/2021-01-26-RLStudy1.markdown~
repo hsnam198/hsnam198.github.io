@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "RL Study #1 : Chapter 1 & 2"
+title: RL Study #1 : Chapter 1 & 2
 date: 2021-01-26 19:20:23 +0900
-category: RL
+category: Sample
 ---
 # Chapter 1. Introduction
 > Reinforcement learning (RL) is learning what to do so as to maximize the numerical reward signal.
