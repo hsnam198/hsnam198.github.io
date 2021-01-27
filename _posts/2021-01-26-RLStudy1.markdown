@@ -28,10 +28,10 @@ action = agent(state, reward, goal)
 # Chapter 2. Multi-armed Bandits
 > _k-armed bandit problem: You are faced repeatedly with a choice among k different options, or actions. After each choice you receive a numerical reward chosen from a stationary probability distribution that depends on the action you selected. Your objective is to maximize the expected total reward over some time period._
 
-+ Expected Reward ($q_{\*}$)
++ Expected Reward ($q_{\star}$)
 
 $$ 
-q_{\*}(a)=E[R_{t}|A_{t}=a] 
+q_{\star}(a)=E[R_{t}|A_{t}=a] 
 $$
 
 
