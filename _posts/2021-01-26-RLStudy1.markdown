@@ -31,4 +31,6 @@ action = agent(state, reward, goal)
 
 + Expected Reward ($q_{\*}$)
 
-$$ q_{\*}(a)=E[R_t|A_t=a] $$
+$$ 
+q_{\*}(a)=E[R_{t}|A_{t}=a] 
+$$
