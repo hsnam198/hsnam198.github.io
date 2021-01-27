@@ -43,5 +43,5 @@ $$
 + _Greedy_ Action Selection
 
 $$
-A_{t}=\text{argmax} Q_{t}(a)
+A_{t}=\underset{a}{\text{argmax}} Q_{t}(a)
 $$
