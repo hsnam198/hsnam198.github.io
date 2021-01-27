@@ -1,9 +1,8 @@
 ---
 layout: post
 title: Reinforcement Learning Study 1
-shorttitle: Chapter 1 and 2
+use_math: true
 date: 2021-01-26 19:20:23 +0900
-html header: <script type="text/javascript" scr="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=Tex-AMS-MML_HTMLorMML"></script>
 category: Study 
 ---
 # Chapter 1. Introduction
