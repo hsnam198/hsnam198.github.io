@@ -34,4 +34,14 @@ $$
 q_{\star}(a)=E[R_{t}|A_{t}=a] 
 $$
 
++ Estimated Value of action $a$ at $t$ ($Q_{t}(a)$)
 
+$$
+Q_{t}(a) = \frac{\text{sum of rewards when }a\text{ taken prior to }t}{\text{number of times }a\text{ taken prior to }t}
+$$
+
++ _Greedy_ Action Selection
+
+$$
+A_{t}=\text{argmax} Q_{t}(a)
+$$
