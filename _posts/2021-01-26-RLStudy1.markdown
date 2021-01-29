@@ -78,10 +78,20 @@ $$
 + Incremental Implementation for Nonstationary Problem
 
 $$
-Q_{n+1}=Q_{n}+\alpha[R_{n}-Q_{n}]
+Q_{n+1}=Q_{n}+\alpha[R_{n}-Q_{n}] //
        =(1-\alpha)^{n}Q_{1}+\sum_{i=1}^{n}\alpha(1-\alpha)^{n-i}R_{i}
 $$
 
 
 + Optimistic Initial Values
+
+![](/Figs/RL_Sutton/Ch2/OptInitial.jpg)
+
++ Upper-Confidence-Bound (UCB) Action Selection
+
+$$
+A_{t}=\underset{a}{\text{argmax}} [Q_{t}(a)+c\sqrt{\frac{\log{t}}{N_{t}(a)}}]
+$$
+
+![](/Figs/RL_Sutton/Ch2/UCB.jpg)
 
