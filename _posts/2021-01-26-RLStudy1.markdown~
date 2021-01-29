@@ -85,3 +85,16 @@ $$
 
 + Optimistic Initial Values
 
+![](/Figs/RL_Sutton/Ch2/OptInitial.jpg)
+
++ Upper-Confidence-Bound (UCB) Action Selection
+
+$$
+{\small
+A_{t}=\underset{a}{\text{argmax}} [Q_{t}(a)+c\sqrt{\frac{\log{t}}{N_{t}(a)}}]
+}
+$$
+
+![](/Figs/RL_Sutton/Ch2/UCB.jpg)
+
++ Upper-Confidence-Bound (UCB) Action Selection
