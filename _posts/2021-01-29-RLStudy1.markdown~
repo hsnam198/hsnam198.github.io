@@ -120,8 +120,7 @@ $$
 }
 \\
 {\small
-H_{t+1}(A_{t})=H_{t}(A_{t})+\alpha(R_{t}-\bar{R}_{t})(1-\pi_{t}(A_{t}))} \\
-{\small
+H_{t+1}(A_{t})=H_{t}(A_{t})+\alpha(R_{t}-\bar{R}_{t})(1-\pi_{t}(A_{t})) \\
 H_{t+1}(a)=H_{t}(a)-\alpha(R_{t}-\bar{R}_{t})\pi_{t}(a),   {\forall}a{\neq}A_{t} 
 }
 $$
