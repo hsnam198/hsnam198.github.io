@@ -59,6 +59,10 @@ else:
 
 + 10 Armed Bandit Problem
 
-![](./Figs/RL_Sutton/Ch2/10ArmedBandit.jpg)
+![](/Figs/RL_Sutton/Ch2/10ArmedBandit.jpg)
+
++ Performance of $\epsilon-$_Greedy_ Action 
+
+![](/Figs/RL_Sutton/Ch2/EpsGreedy.jpg)
 
 
