@@ -33,19 +33,25 @@ action = agent(state, reward, goal)
 + Expected Reward ($q_{\star}$)
 
 $$ 
+{\small
 q_{\star}(a)=E[R_{t}|A_{t}=a] 
+}
 $$
 
 + Estimated Value of action $a$ at $t$ ($Q_{t}(a)$)
 
 $$
+{\small
 Q_{t}(a) = \frac{\text{sum of rewards when }a\text{ taken prior to }t}{\text{number of times }a\text{ taken prior to }t}
+}
 $$
 
 + _Greedy_ Action Selection
 
 $$
+{\small
 A_{t}=\underset{a}{\text{argmax}} Q_{t}(a)
+}
 $$
 
 + $\epsilon-$_Greedy_ Action Selection
@@ -67,19 +73,25 @@ else:
 
 + Incremental Implementation
 $$
+{\small
 NewEstimate \leftarrow OldEstimate + StepSize [Target - OldEstimate]
+}
 $$
 
 $$
+{\small
 Q_{n} = \frac{R_{1}+R_{2}+\cdots+R_{n-1}}{n-1}
 Q_{n+1}=Q_{n}+\frac{1}{n}[R_{n}-Q_{n}]
+}
 $$
 
 + Incremental Implementation for Nonstationary Problem
 
 $$
-Q_{n+1}=Q_{n}+\alpha[R_{n}-Q_{n}] //
+{\small
+Q_{n+1}=Q_{n}+\alpha[R_{n}-Q_{n}] \\
        =(1-\alpha)^{n}Q_{1}+\sum_{i=1}^{n}\alpha(1-\alpha)^{n-i}R_{i}
+}
 $$
 
 
