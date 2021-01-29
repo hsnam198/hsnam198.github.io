@@ -65,11 +65,13 @@ else:
 
 + 10 Armed Bandit Problem
 
-![](/Figs/RL_Sutton/Ch2/10ArmedBandit.jpg)
+![](/Figs/RL_Sutton/Ch2/10ArmedBandit.jpg){: width="100%" height="100%"}
+
 
 + Performance of $\epsilon-$_Greedy_ Action 
 
-![](/Figs/RL_Sutton/Ch2/EpsGreedy.jpg)
+![](/Figs/RL_Sutton/Ch2/EpsGreedy.jpg){: width="100%" height="100%"}
+
 
 + Incremental Implementation
 $$
@@ -97,7 +99,8 @@ $$
 
 + Optimistic Initial Values
 
-![](/Figs/RL_Sutton/Ch2/OptInitial.jpg)
+![](/Figs/RL_Sutton/Ch2/OptInitial.jpg){: width="100%" height="100%"}
+
 
 + Upper-Confidence-Bound (UCB) Action Selection
 
@@ -107,6 +110,6 @@ A_{t}=\underset{a}{\text{argmax}} [Q_{t}(a)+c\sqrt{\frac{\log{t}}{N_{t}(a)}}]
 }
 $$
 
-![](/Figs/RL_Sutton/Ch2/UCB.jpg)
+![](/Figs/RL_Sutton/Ch2/UCB.jpg){: width="100%" height="100%"}
 
 + Upper-Confidence-Bound (UCB) Action Selection
