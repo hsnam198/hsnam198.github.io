@@ -4,6 +4,8 @@ title: Reinforcement Learning Study 1
 date: 2021-01-26 19:20:23 +0900
 category: Study 
 ---
+## Textbook: Reinforcement Learning: An Introduction - Sutton and Barto
+
 # Chapter 1. Introduction
 > _Reinforcement learning (RL) is learning what to do so as to maximize the numerical reward signal._
 
@@ -45,3 +47,18 @@ $$
 $$
 A_{t}=\underset{a}{\text{argmax}} Q_{t}(a)
 $$
+
++ $\epsilon-$_Greedy_ Action Selection
+
+```ruby
+if rand() > epsilon:
+	action = argmax(Qt)
+else:
+	action = randint(numAction)
+```
+
++ 10 Armed Bandit Problem
+
+![](../Figs/RL_Sutton/Ch2/10ArmedBandit.jpg)
+
+
