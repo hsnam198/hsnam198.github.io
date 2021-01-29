@@ -4,7 +4,7 @@ title: Reinforcement Learning Study 1
 date: 2021-01-26 19:20:23 +0900
 category: Study 
 ---
-## Textbook: Reinforcement Learning: An Introduction - Sutton and Barto
+#### Textbook: Reinforcement Learning: An Introduction - Sutton and Barto
 
 # Chapter 1. Introduction
 > _Reinforcement learning (RL) is learning what to do so as to maximize the numerical reward signal._
@@ -59,6 +59,6 @@ else:
 
 + 10 Armed Bandit Problem
 
-![](../Figs/RL_Sutton/Ch2/10ArmedBandit.jpg)
+![](./Figs/RL_Sutton/Ch2/10ArmedBandit.jpg)
 
 
