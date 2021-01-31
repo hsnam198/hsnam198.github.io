@@ -1,0 +1,40 @@
+---
+layout: post
+title: Reinforcement Learning Study 2
+date: 2021-02-04 11:10:00 +0900
+category: Study 
+---
+#### Textbook: Reinforcement Learning: An Introduction - Sutton and Barto
+
+# Chapter 3. Finite Markov Decision Process (MDP)
+> _MDPs are a classical formalization of sequential decision making, where actions influence not just immediate rewards, but also subsequent situations, or states, and through those future rewards._
+
++ _Agent_: Learner and decision maker
+
++ _Environment_: Thing the agent interacts with, comprising evertything outside it.
+
+![](/Figs/RL_Sutton/Ch3/Interaction.jpg){: width="100%" height="100%"}
+
++ MDP depends only on the preceding state and action. 
+
+$${\small p(s',r|s,a)=\Pr\{S_{t}=s',R_{t}=r|S_{t-1}=s,A_{t-1}=a\} }$$
+
++ _State-transition probabilities_
+
+$${\small  p(s'|s,a)=\Pr\{S_{t}=s'|S_{t-1}=s,A_{t-1}=a\}=\sum_{r\in\mathcal{R}}p(s',r|s,a) }$$
+
++ Expected rewards for state-action pairs
+
+$${\small  r(s,a)=\mathbb{E}[R_{t}|S_{t-1}=s,A_{t-1}=a]=\sum_{r\in\mathcal{R}}r\sum_{s'\in\mathcal{S}}p(s',r|s,a) }$$
+
++ Expected rewards for state-action-next-state triples
+
+$${\small  r(s,a,s')=\mathbb{E}[R_{t}|S_{t-1}=s,A_{t-1}=a,S_{t}=s']=\sum_{r\in\mathcal{R}}r\frac{p(s',r|s,a)}{p(s'|s,a)} }$$
+
+
+
+```ruby
+state, reward = Environment(action)
+action = agent(state, reward, goal)
+```
+
