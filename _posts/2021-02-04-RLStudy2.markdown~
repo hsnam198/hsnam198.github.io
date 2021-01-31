@@ -37,11 +37,27 @@ $${\small  r(s,a,s')=\mathbb{E}[R_{t}|S_{t-1}=s,A_{t-1}=a,S_{t}=s']=\sum_{r\in\m
 
 + Return for episode with terminal state at T
 
-$$ G_{t} = R_{t+1}+R_{t+2}+\cdots+R_{T} $$
+$${\small G_{t} = R_{t+1}+R_{t+2}+\cdots+R_{T} }$$
 
-+ Discounted Return for continuous tasks
++ Discounted Return for continuous tasks with discount rate of $\gamma$
 
-$$ G_{t} = R_{t+1}+\gammaR_{t+2}+\gamma^{2}R_{t+2}+\\cdots = \sum_{k=0}^{\inf}\gamma^{k}R_{t+k+1} $$
+$${\small G_{t} = R_{t+1}+\gammaR_{t+2}+\gamma^{2}R_{t+2}+\\cdots = \sum_{k=0}^{\inf}\gamma^{k}R_{t+k+1} }$$
+
++ Unified Return
+
+$${\small G_{t} = \sum_{k=t+1}^{T}\gamma^{k-t-1}R_{k} }$$
+
++ Policy ($\pi(a|s)$): A mapping from states to probabilities of selecting each possible action
+
++ State-value fuction ($v_{\pi}(s)$)
+
+$${\small v_{\pi}(s) = \mathbb{E_{\pi}}[G_{t}|S_{t}=s] }$$
+
++ Action-value fuction ($q_{\pi}(s,a)$)
+
+$${\small q_{\pi}(s,a) = \mathbb{E_{\pi}}[G_{t}|S_{t}=s,A_{t}=a] }$$
+
++ Bellman equation for $v_{\pi}(s)$
 
 
 ```ruby
