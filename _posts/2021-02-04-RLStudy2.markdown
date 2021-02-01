@@ -59,6 +59,10 @@ $${\small q_{\pi}(s,a) = \mathbb{E_{\pi}}[G_{t}|S_{t}=s,A_{t}=a] }$$
 
 + Bellman equation for $v_{\pi}(s)$
 
+$${\small v_{\pi}(s)=\mathbb{E_{\pi}}[G_{t}|S_{t}=s]=\mathbb{E_{\pi}}[R_{t}+{\gamma}G_{t+1}|S_{t}=s]  }\\
+ {\small            =\sum_{a}\pi(a|s)\sum_{s'}\sum_{r}p(s',r|s,a)[r+\gamma\mathbb{E_{\pi}}[G_{t+1}|S_{t+1}=s']  }\\
+ {\small            =\sum_{a}\pi(a|s)\sum_{s',r}p(s',r|s,a)[r+{\gamma}v_{\pi}(s')] }
+$$
 
 ```ruby
 state, reward = Environment(action)

@@ -47,9 +47,7 @@ $${\small G_{t} = R_{t+1}+{\gamma}R_{t+2}+\gamma^{2}R_{t+2}+\cdots = \sum_{k=0}^
 
 $${\small G_{t} = \sum_{k=t+1}^{T}\gamma^{k-t-1}R_{k} }$$
 
-+ Policy (${\pi}(a)$)
-
-A mapping from states to probabilities of selecting each possible action
++ Policy (${\pi}(a\|s)$): A mapping from states to probabilities of selecting each possible action
 
 + State-value fuction ($v_{\pi}(s)$)
 
