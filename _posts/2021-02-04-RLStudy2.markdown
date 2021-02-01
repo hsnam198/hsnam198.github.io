@@ -74,7 +74,7 @@ $$
 
 + Optimal Policy
 
-> _A policy $\pi$ is defined to be better than or equal to a policy $\pi'$ if its expected return is greater than or equal to that of $\pi'$ for all states. In other words,_ $\pi\geqWpi'$ _if and only if_ $v_{\pi}(s)\geqv_{\pi'}(s)$ _for all_ $s\in\mathcal{S}$. _There is always at leat one policy that is better than or equal to all other policies. This is an optimal policy._
+> _A policy $\pi$ is defined to be better than or equal to a policy $\pi'$ if its expected return is greater than or equal to that of $\pi'$ for all states. In other words,_ $\pi{\geq}\pi'$ _if and only if_ $v_{\pi}(s){\geq}v_{\pi'}(s)$ _for all_ $s\in\mathcal{S}$. _There is always at leat one policy that is better than or equal to all other policies. This is an optimal policy._
 
 ```ruby
 state, reward = Environment(action)

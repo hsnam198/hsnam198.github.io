@@ -72,6 +72,10 @@ $${\small q_{\pi}(s,a)=\mathbb{E_{\pi}}[G_{t}|S_{t}=s, A_{t}=a] }\\
  {\small            =\sum_{s',r}p(s',r|s,a)[r+{\gamma}v_{\pi}(s')] }
 $$
 
++ Optimal Policy
+
+> _A policy $\pi$ is defined to be better than or equal to a policy $\pi'$ if its expected return is greater than or equal to that of $\pi'$ for all states. In other words,_ $\pi\geqWpi'$ _if and only if_ $v_{\pi}(s)\geqv_{\pi'}(s)$ _for all_ $s\in\mathcal{S}$. _There is always at leat one policy that is better than or equal to all other policies. This is an optimal policy._
+
 ```ruby
 state, reward = Environment(action)
 action = agent(state, reward, goal)
