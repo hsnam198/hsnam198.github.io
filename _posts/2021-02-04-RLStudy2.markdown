@@ -66,7 +66,8 @@ $$
 
 + Bellman equation for $q_{\pi}(s,a)$
 
-$${\small q_{\pi}(s,a)=\mathbb{E_{\pi}}[G_{t}|S_{t}=s, A_{t}=a]=\mathbb{E_{\pi}}[R_{t}+{\gamma}G_{t+1}|S_{t}=s, A_{t}=a]  }\\
+$${\small q_{\pi}(s,a)=\mathbb{E_{\pi}}[G_{t}|S_{t}=s, A_{t}=a] }\\
+{\small =\mathbb{E_{\pi}}[R_{t}+{\gamma}G_{t+1}|S_{t}=s, A_{t}=a]  }\\
  {\small            =\sum_{s'}\sum_{r}p(s',r|s,a)[r+\gamma\mathbb{E_{\pi}}[G_{t+1}|S_{t+1}=s']]  }\\
  {\small            =\sum_{s',r}p(s',r|s,a)[r+{\gamma}v_{\pi}(s')] }
 $$
