@@ -74,7 +74,31 @@ $$
 
 + Optimal Policy
 
-> _A policy $\pi$ is defined to be better than or equal to a policy $\pi'$ if its expected return is greater than or equal to that of $\pi'$ for all states. In other words,_ $\pi\geqWpi'$ _if and only if_ $v_{\pi}(s)\geqv_{\pi'}(s)$ _for all_ $s\in\mathcal{S}$. _There is always at leat one policy that is better than or equal to all other policies. This is an optimal policy._
+> _A policy $\pi$ is defined to be better than or equal to a policy $\pi'$ if its expected return is greater than or equal to that of $\pi'$ for all states. In other words,_ $\pi{\geq}\pi'$ _if and only if_ $v_{\pi}(s){\geq}v_{\pi'}(s)$ _for all_ $s\in\mathcal{S}$. _There is always at least one policy that is better than or equal to all other policies. This is an optimal policy._
+
++ Optimal Value Function (Bellman optimality equation)
+
+$$
+{\small v_{\*}(s)=\underset{a\in\mathcal{A(s)}}{\max}q_{\pi_{\*}}(s,a) } \\
+{\small \underset{a}{\max}\mathbb{E_{\pi_{\*}}[G_{t}|S_{t}=s,A_{t}=a] } \\
+{\small \underset{a}{\max}\mathbb{E_{\pi_{\*}}[R_{t+1}+{\gamma}G_{t+1}|S_{t}=s,A_{t}=a] } \\
+{\small \underset{a}{\max}\mathbb{E_{\pi_{\*}}[R_{t+1}+{\gamma}v_{\pi_{\*}}(S_{t+1})|S_{t}=s,A_{t}=a] } \\
+{\small \underset{a}{\max}\sum_{s',r}p(s',r|s,a)[r+{\gamma}v_{\*}(s')] }
+
+$$
+
++ Optimal Action-Value Function (Bellman optimality equation)
+
+$$
+{\small q_{\*}(s,a)= \mathbb{E}[R_{t+1}+{\gamma}\underset{a'}{\max}q_{\*}(S_{t+1},a')|S_{t}=s,A_{t}=a] } \\
+{\small \sum_{s',r}p(s',r|s,a)[r+{\gamma}\underset{a'}{\max}q_{\*}(s',a')] }
+$$
+
++ Backup Diagrams
+
++ Optimality and Approximation
+
+> _A well-defined notion of optimality organizes the approach to learnining and provides a way to understand the theoretical  properties of various learning algorithms, but it is an ideal that agent can only approximate to varying degrees. The memory avaiable is also an important constraint. A large amount of memory is often required to build up approximations of value functions, policies, and models. In the cases of far more states than possible in a table, the functions must be approximated, using some sort of more compact parameterized function representation._
 
 ```ruby
 state, reward = Environment(action)
