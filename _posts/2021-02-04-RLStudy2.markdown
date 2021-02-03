@@ -102,9 +102,3 @@ $$
 
 > _A well-defined notion of optimality organizes the approach to learnining and provides a way to understand the theoretical  properties of various learning algorithms, but it is an ideal that agent can only approximate to varying degrees. The memory avaiable is also an important constraint. A large amount of memory is often required to build up approximations of value functions, policies, and models. In the cases of far more states than possible in a table, the functions must be approximated, using some sort of more compact parameterized function representation._
 
-
-```ruby
-state, reward = Environment(action)
-action = agent(state, reward, goal)
-```
-
