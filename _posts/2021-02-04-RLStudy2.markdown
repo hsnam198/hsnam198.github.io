@@ -80,11 +80,22 @@ $$
 
 $$
 {\small v_{\ast}(s)=\underset{a\in\mathcal{A(s)}}{\max}q_{\pi_{\ast}}(s,a) } \\
-{\small \underset{a}{\max}\mathbb{E_{\pi_{\ast}}[G_{t}|S_{t}=s,A_{t}=a] } \\
-{\small \underset{a}{\max}\mathbb{E_{\pi_{\ast}}[R_{t+1}+{\gamma}G_{t+1}|S_{t}=s,A_{t}=a] } \\
-{\small \underset{a}{\max}\mathbb{E_{\pi_{\ast}}[R_{t+1}+{\gamma}v_{\pi_{\ast}}(S_{t+1})|S_{t}=s,A_{t}=a] } \\
-{\small \underset{a}{\max}\sum_{s',r}p(s',r|s,a)[r+{\gamma}v_{\ast}(s')] }
+$$
 
+$$
+{\small \underset{a}{\max}\mathbb{E_{\pi_{\ast}}[G_{t}|S_{t}=s,A_{t}=a] } \\
+$$
+
+$$
+{\small \underset{a}{\max}\mathbb{E_{\pi_{\ast}}[R_{t+1}+{\gamma}G_{t+1}|S_{t}=s,A_{t}=a] } \\
+$$
+
+$$
+{\small \underset{a}{\max}\mathbb{E_{\pi_{\ast}}[R_{t+1}+{\gamma}v_{\pi_{\ast}}(S_{t+1})|S_{t}=s,A_{t}=a] } \\
+$$
+
+$$
+{\small \underset{a}{\max}\sum_{s',r}p(s',r|s,a)[r+{\gamma}v_{\ast}(s')] }
 $$
 
 + Optimal Action-Value Function (Bellman optimality equation)
