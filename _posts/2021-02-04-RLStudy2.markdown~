@@ -79,8 +79,7 @@ $$
 + Optimal Value Function (Bellman optimality equation)
 
 $$
-{\small v_{\*}(s)=\underset{a\in\mathcal{A(s)}}{\max}q_{\pi_{\*}}(s,a) }
- \\
+{\small v_{\*}(s)=\underset{a\in\mathcal{A(s)}}{\max}q_{\pi_{\*}}(s,a) } \\
 $$
 
 $$
