@@ -80,6 +80,9 @@ $$
 
 $$
 {\small v_{\*}(s)=\underset{a\in\mathcal{A(s)}}{\max}q_{\pi_{\*}}(s,a) } \\
+$$
+
+$$
 {\small \underset{a}{\max}\mathbb{E_{\pi_{\*}}[G_{t}|S_{t}=s,A_{t}=a] } \\
 {\small \underset{a}{\max}\mathbb{E_{\pi_{\*}}[R_{t+1}+{\gamma}G_{t+1}|S_{t}=s,A_{t}=a] } \\
 {\small \underset{a}{\max}\mathbb{E_{\pi_{\*}}[R_{t+1}+{\gamma}v_{\pi_{\*}}(S_{t+1})|S_{t}=s,A_{t}=a] } \\

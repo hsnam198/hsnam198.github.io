@@ -79,7 +79,11 @@ $$
 + Optimal Value Function (Bellman optimality equation)
 
 $$
-{\small v_{\*}(s)=\underset{a\in\mathcal{A(s)}}{\max}q_{\pi_{\*}}(s,a) } \\
+{\small v_{\*}(s)=\underset{a\in\mathcal{A(s)}}{\max}q_{\pi_{\*}}(s,a) }
+ \\
+$$
+
+$$
 {\small \underset{a}{\max}\mathbb{E_{\pi_{\*}}[G_{t}|S_{t}=s,A_{t}=a] } \\
 {\small \underset{a}{\max}\mathbb{E_{\pi_{\*}}[R_{t+1}+{\gamma}G_{t+1}|S_{t}=s,A_{t}=a] } \\
 {\small \underset{a}{\max}\mathbb{E_{\pi_{\*}}[R_{t+1}+{\gamma}v_{\pi_{\*}}(S_{t+1})|S_{t}=s,A_{t}=a] } \\
@@ -96,9 +100,13 @@ $$
 
 + Backup Diagrams
 
+![](/Figs/RL_Sutton/Ch3/backup_v_q.jpg){: width="100%" height="100%"}
+![](/Figs/RL_Sutton/Ch3/backup_opt_v_q.jpg){: width="100%" height="100%"}
+
 + Optimality and Approximation
 
 > _A well-defined notion of optimality organizes the approach to learnining and provides a way to understand the theoretical  properties of various learning algorithms, but it is an ideal that agent can only approximate to varying degrees. The memory avaiable is also an important constraint. A large amount of memory is often required to build up approximations of value functions, policies, and models. In the cases of far more states than possible in a table, the functions must be approximated, using some sort of more compact parameterized function representation._
+
 
 ```ruby
 state, reward = Environment(action)
