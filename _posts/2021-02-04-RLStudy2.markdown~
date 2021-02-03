@@ -96,7 +96,6 @@ $$
 
 $$
 {\small \underset{a}{\max}\sum_{s',r}p(s',r|s,a)[r+{\gamma}v_{\ast}(s')] }
-
 $$
 
 + Optimal Action-Value Function (Bellman optimality equation)
