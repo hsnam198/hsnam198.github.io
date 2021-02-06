@@ -1,0 +1,104 @@
+---
+layout: post
+title: Reinforcement Learning Study 2
+date: 2021-02-04 11:10:00 +0900
+category: Study 
+---
+#### Textbook: Reinforcement Learning: An Introduction - Sutton and Barto
+
+# Chapter 3. Finite Markov Decision Process (MDP)
+> _MDPs are a classical formalization of sequential decision making, where actions influence not just immediate rewards, but also subsequent situations, or states, and through those future rewards._
+
++ _Agent_: Learner and decision maker (한글이 왜 안 되나?)
+
++ _Environment_: Thing the agent interacts with, comprising evertything outside it.
+
+![](/Figs/RL_Sutton/Ch3/Interaction.jpg){: width="100%" height="100%"}
+
++ MDP depends only on the preceding state and action. 
+
+$${\small p(s',r|s,a)=\Pr\{S_{t}=s',R_{t}=r|S_{t-1}=s,A_{t-1}=a\} }$$
+
++ _State-transition probabilities_
+
+$${\small  p(s'|s,a)=\Pr\{S_{t}=s'|S_{t-1}=s,A_{t-1}=a\}=\sum_{r\in\mathcal{R}}p(s',r|s,a) }$$
+
++ Expected rewards for state-action pairs
+
+$${\small  r(s,a)=\mathbb{E}[R_{t}|S_{t-1}=s,A_{t-1}=a]=\sum_{r\in\mathcal{R}}r\sum_{s'\in\mathcal{S}}p(s',r|s,a) }$$
+
++ Expected rewards for state-action-next-state triples
+
+$${\small  r(s,a,s')=\mathbb{E}[R_{t}|S_{t-1}=s,A_{t-1}=a,S_{t}=s']=\sum_{r\in\mathcal{R}}r\frac{p(s',r|s,a)}{p(s'|s,a)} }$$
+
++ Goal: Reward hypothesis
+
+> _That all of what we mean by goals and purposes can be well thought of as the maximization of the expected value of the cumulative sum of a received scalar signal (called reward)._
+
++ Return for episode with terminal state at T
+
+$${\small G_{t} = R_{t+1}+R_{t+2}+\cdots+R_{T} }$$
+
++ Discounted Return for continuous tasks with discount rate of $\gamma$
+
+$${\small G_{t} = R_{t+1}+{\gamma}R_{t+2}+\gamma^{2}R_{t+2}+\cdots = \sum_{k=0}^{\infty}\gamma^{k}R_{t+k+1} }$$
+
++ Unified Return
+
+$${\small G_{t} = \sum_{k=t+1}^{T}\gamma^{k-t-1}R_{k} }$$
+
++ Policy (${\pi}(a\|s)$): A mapping from states to probabilities of selecting each possible action
+
++ State-value fuction ($v_{\pi}(s)$)
+
+$${\small v_{\pi}(s) = \mathbb{E_{\pi}}[G_{t}|S_{t}=s] }$$
+
++ Action-value fuction ($q_{\pi}(s,a)$)
+
+$${\small q_{\pi}(s,a) = \mathbb{E_{\pi}}[G_{t}|S_{t}=s,A_{t}=a] }$$
+
++ Bellman equation for $v_{\pi}(s)$
+
+$${\small v_{\pi}(s)=\mathbb{E_{\pi}}[G_{t}|S_{t}=s]=\mathbb{E_{\pi}}[R_{t}+{\gamma}G_{t+1}|S_{t}=s]  }\\
+ {\small            =\sum_{a}\pi(a|s)\sum_{s'}\sum_{r}p(s',r|s,a)[r+\gamma\mathbb{E_{\pi}}[G_{t+1}|S_{t+1}=s']]  }\\
+ {\small            =\sum_{a}\pi(a|s)\sum_{s',r}p(s',r|s,a)[r+{\gamma}v_{\pi}(s')] }
+$$
+
++ Bellman equation for $q_{\pi}(s,a)$
+
+$${\small q_{\pi}(s,a)=\mathbb{E_{\pi}}[G_{t}|S_{t}=s, A_{t}=a] }\\
+{\small =\mathbb{E_{\pi}}[R_{t}+{\gamma}G_{t+1}|S_{t}=s, A_{t}=a]  }\\
+ {\small            =\sum_{s'}\sum_{r}p(s',r|s,a)[r+\gamma\mathbb{E_{\pi}}[G_{t+1}|S_{t+1}=s']]  }\\
+ {\small            =\sum_{s',r}p(s',r|s,a)[r+{\gamma}v_{\pi}(s')] }
+$$
+
++ Optimal Policy
+
+> _A policy $\pi$ is defined to be better than or equal to a policy $\pi'$ if its expected return is greater than or equal to that of $\pi'$ for all states. In other words,_ $\pi{\geq}\pi'$ _if and only if_ $v_{\pi}(s){\geq}v_{\pi'}(s)$ _for all_ $s\in\mathcal{S}$. _There is always at least one policy that is better than or equal to all other policies. This is an optimal policy._
+
++ Optimal Value Function (Bellman optimality equation)
+
+$$
+{\small v_{\ast}(s)=\underset{a\in\mathcal{A(s)}}{\max}q_{\pi_{\ast}}(s,a) } \\
+{\small = \underset{a}{\max}\mathbb{E_{\pi_{\ast}}}[G_{t}|S_{t}=s,A_{t}=a] } \\
+{\small = \underset{a}{\max}\mathbb{E_{\pi_{\ast}}}[R_{t+1}+{\gamma}G_{t+1}|S_{t}=s,A_{t}=a] } \\
+{\small = \underset{a}{\max}\mathbb{E_{\pi_{\ast}}}[R_{t+1}+{\gamma}v_{\pi_{\ast}}(S_{t+1})|S_{t}=s,A_{t}=a] } \\
+{\small = \underset{a}{\max}\sum_{s',r}p(s',r|s,a)[r+{\gamma}v_{\ast}(s')] }
+$$
+
++ Optimal Action-Value Function (Bellman optimality equation)
+
+$$
+{\small q_{\ast}(s,a)= \mathbb{E}[R_{t+1}+{\gamma}\underset{a'}{\max}q_{\ast}(S_{t+1},a')|S_{t}=s,A_{t}=a] } \\
+{\small \sum_{s',r}p(s',r|s,a)[r+{\gamma}\underset{a'}{\max}q_{\ast}(s',a')] }
+$$
+
++ Backup Diagrams
+
+![](/Figs/RL_Sutton/Ch3/backup_v_q.jpg){: width="100%" height="100%"}
+![](/Figs/RL_Sutton/Ch3/backup_opt_v_q.jpg){: width="100%" height="100%"}
+
++ Optimality and Approximation
+
+> _A well-defined notion of optimality organizes the approach to learnining and provides a way to understand the theoretical  properties of various learning algorithms, but it is an ideal that agent can only approximate to varying degrees. The memory avaiable is also an important constraint. A large amount of memory is often required to build up approximations of value functions, policies, and models. In the cases of far more states than possible in a table, the functions must be approximated, using some sort of more compact parameterized function representation._
+
