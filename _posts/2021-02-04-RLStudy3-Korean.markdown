@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Reinforcement Learning Study 2
-date: 2021-02-04 11:10:00 +0900
-category: Study 
+title: Reinforcement Learning Study - Test
+date: 2021-02-06 11:10:00 +0900
+category: Essay 
 ---
 #### Textbook: Reinforcement Learning: An Introduction - Sutton and Barto
 
