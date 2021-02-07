@@ -11,7 +11,7 @@ category: Study
 
 + Policy Evaluation (Prediction): To compute the state-value function for an arbitrary policy
 
-_Iterative policy evaluation_
+\indent _Iterative policy evaluation_
 
 $$
 {\small v_{k+1}(s) = \mathbb{E_{\pi}}[R_{t+1}+{\gamma}v_{k}(S_{t+1})|S_{t}=s] }\\
