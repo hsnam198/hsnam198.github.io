@@ -11,7 +11,7 @@ category: Study
 
 + Policy Evaluation (Prediction): To compute the state-value function for an arbitrary policy
 
-&ensp; _Iterative policy evaluation_
+&ensp;&ensp;&ensp; _Iterative policy evaluation_
 
 $$
 {\small v_{k+1}(s) = \mathbb{E_{\pi}}[R_{t+1}+{\gamma}v_{k}(S_{t+1})|S_{t}=s] }\\
@@ -20,7 +20,7 @@ $$
 
 + Policy Improvement
 
-For example, greedy policy ($\pi'$)
+&ensp;&ensp;&ensp; For example, greedy policy ($\pi'$)
 
 $$
 {\small \pi'(s) = \underset{a}{\arg\max}q_{\pi}(s,a)}
