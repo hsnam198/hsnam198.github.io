@@ -18,40 +18,21 @@ $$
 {\small = \sum_{a}\pi(a|s)\sum_{s',r}p(s',r|s,a)[r+{\gamma}v_{k}(s')]}
 $$
 
-```ruby
-def prob_policy(a,s):
- return prob
-
-def prob_s_r(_s,r,s,a):
- return prob
- 
-v = zeros()
-delta = 0
-
-while True:
- oldV = v(s)
- for s in S:
-  oldV = v(s)
-  _vs = 0
-   for a in A:
-    _vsa = 0
-    for _s in S:
-     for r in R:
-      _vsa += prob_s_r(_s,r,s,a)*(r+gamma*v(_s)
-    _vs += prob_policy(a,s)*_vsa 
-    
-  v(s) = _vs
-  delta = max(delta, abs(oldV-v(s))
-  
-  if (delta < th):
-   break
-   
- finalV = v
-```
-
 + Policy Improvement
 
+For example, greedy policy ($\pi'$)
+
 $$
-{\small \pi'(s) = \underset{a}{\arg\max}q_{\pi}(s,a)
+{\small \pi'(s) = \underset{a}{\arg\max}q_{\pi}(s,a)}
+$$
+
++ Policy Iteration
+
+
++ Value Iteration (only one sweep is needed)
+
+$$
+{\small v_{k+1}(s) = \underset{a}{\max}\mathbb{E}[R_{t+1}+{\gamma}v_{k}(S_{t+1})|S_{t}=s] }\\
+{\small = \underset{a}{\max}\sum_{s',r}p(s',r|s,a)[r+{\gamma}v_{k}(s')]}
 $$
 
