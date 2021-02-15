@@ -42,12 +42,13 @@ $$
 ![](/Figs/RL_Sutton/Ch4/valueIter.jpg){: width="100%" height="100%"}
 
 + Asynchronous DP
-
+	+ In-place DP
 ![](/Figs/RL_Sutton/Ch4/inplaceDP.jpg){: width="100%" height="100%"}
 
-
+	+ Prioritized Sweeping DP
 ![](/Figs/RL_Sutton/Ch4/PrioritizedDP.jpg){: width="100%" height="100%"}
 
+	+ Real-time DP
 ![](/Figs/RL_Sutton/Ch4/RTDP.jpg){: width="100%" height="100%"}
 
 + Generalized Policy Iteration
