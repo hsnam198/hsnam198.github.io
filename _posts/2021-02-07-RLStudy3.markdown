@@ -46,7 +46,7 @@ $$
 ![](/Figs/RL_Sutton/Ch4/inplaceDP.jpg){: width="100%" height="100%"}
 
 
-![](/Figs/RL_Sutton/Ch4/prioritizedDP.jpg){: width="100%" height="100%"}
+![](/Figs/RL_Sutton/Ch4/PrioritizedDP.jpg){: width="100%" height="100%"}
 
 ![](/Figs/RL_Sutton/Ch4/RTDP.jpg){: width="100%" height="100%"}
 
