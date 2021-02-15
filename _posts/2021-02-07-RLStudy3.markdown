@@ -13,6 +13,8 @@ category: Study
 
 &ensp;&ensp;&ensp; _Iterative policy evaluation_
 
+![](/Figs/RL_Sutton/Ch4/policyEval.jpg){: width="100%" height="100%"}
+
 $$
 {\small v_{k+1}(s) = \mathbb{E_{\pi}}[R_{t+1}+{\gamma}v_{k}(S_{t+1})|S_{t}=s] }\\
 {\small = \sum_{a}\pi(a|s)\sum_{s',r}p(s',r|s,a)[r+{\gamma}v_{k}(s')]}
@@ -28,6 +30,7 @@ $$
 
 + Policy Iteration
 
+![](/Figs/RL_Sutton/Ch4/policyIter.jpg){: width="100%" height="100%"}
 
 + Value Iteration (only one sweep is needed)
 
@@ -36,3 +39,18 @@ $$
 {\small = \underset{a}{\max}\sum_{s',r}p(s',r|s,a)[r+{\gamma}v_{k}(s')]}
 $$
 
+![](/Figs/RL_Sutton/Ch4/valueIter.jpg){: width="100%" height="100%"}
+
++ Asynchronous DP
+
+![](/Figs/RL_Sutton/Ch4/inplaceDP.jpg){: width="100%" height="100%"}
+
+![](/Figs/RL_Sutton/Ch4/prioritizedDP.jpg){: width="100%" height="100%"}
+
+![](/Figs/RL_Sutton/Ch4/RTDP.jpg){: width="100%" height="100%"}
+
++ Generalized Policy Iteration
+
+![](/Figs/RL_Sutton/Ch4/GPI1.jpg){: width="100%" height="100%"}
+
+![](/Figs/RL_Sutton/Ch4/GPI2.jpg){: width="100%" height="100%"}
