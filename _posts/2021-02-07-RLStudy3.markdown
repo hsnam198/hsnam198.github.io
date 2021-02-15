@@ -1,0 +1,38 @@
+---
+layout: post
+title: Reinforcement Learning Study 3
+date: 2021-02-07 17:00:00 +0900
+category: Study 
+---
+#### Textbook: Reinforcement Learning: An Introduction - Sutton and Barto
+
+# Chapter 4. Dynamic Programming
+> _The term dynamic programming (DP) refers to a collection of algorithms that can be used to compute optimal policies given a perfect model of the environement as a MDP._
+
++ Policy Evaluation (Prediction): To compute the state-value function for an arbitrary policy
+
+&ensp;&ensp;&ensp; _Iterative policy evaluation_
+
+$$
+{\small v_{k+1}(s) = \mathbb{E_{\pi}}[R_{t+1}+{\gamma}v_{k}(S_{t+1})|S_{t}=s] }\\
+{\small = \sum_{a}\pi(a|s)\sum_{s',r}p(s',r|s,a)[r+{\gamma}v_{k}(s')]}
+$$
+
++ Policy Improvement
+
+&ensp;&ensp;&ensp; For example, greedy policy ($\pi'$)
+
+$$
+{\small \pi'(s) = \underset{a}{\arg\max}q_{\pi}(s,a)}
+$$
+
++ Policy Iteration
+
+
++ Value Iteration (only one sweep is needed)
+
+$$
+{\small v_{k+1}(s) = \underset{a}{\max}\mathbb{E}[R_{t+1}+{\gamma}v_{k}(S_{t+1})|S_{t}=s] }\\
+{\small = \underset{a}{\max}\sum_{s',r}p(s',r|s,a)[r+{\gamma}v_{k}(s')]}
+$$
+
