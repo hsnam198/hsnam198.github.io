@@ -56,7 +56,7 @@ $$
 $$
 \small{
 \eqalign{ 
-q_{\pi}(s,{\pi}'}(s)) & = \sum_{a} {\pi}'(a|s)q_{\pi}(s,a)
+q_{\pi}(s,\pi'}(s)) & = \sum_{a} \pi'(a|s)q_{\pi}(s,a)
 }
 }
 $$
