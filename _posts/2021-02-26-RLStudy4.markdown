@@ -64,10 +64,10 @@ $$
 $$
 \small{
 \eqalign{ 
-q_{\pi}(s,{\pi}'}(s)) & = \sum_{a} {\pi}'(a|s)q_{\pi}(s,a) \cr
-			       & = \frac{\epsilon}{|A(s)|}\sum_{a} {\pi}'(a|s)q_{\pi}(s,a) + (1-\epsilon) \underset{a}{\max}q_{\pi}(s,a) \cr
-			       & \geq \frac{\epsilon}{|A(s)|}\sum_{a} {\pi}'(a|s)q_{\pi}(s,a) + (1-\epsilon) \sum_{a} \frac{\pi(a|s)-\frac{\epsilon}{|A(s)|}}{1-\epsilon} q_{\pi}(s,a) \cr
-			       & = \frac{\epsilon}{|A(s)|}\sum_{a} {\pi}'(a|s)q_{\pi}(s,a) - \frac{\epsilon}{|A(s)|}\sum_{a} {\pi}'(a|s)q_{\pi}(s,a) + \sum_{a} \pi(a|s) q_{\pi}(s,a) \cr
+q_{\pi}(s,\pi'}(s)) & = \sum_{a} \pi'(a|s)q_{\pi}(s,a) \cr
+			       & = \frac{\epsilon}{|A(s)|}\sum_{a} q_{\pi}(s,a) + (1-\epsilon) \underset{a}{\max}q_{\pi}(s,a) \cr
+			       & \geq \frac{\epsilon}{|A(s)|}\sum_{a}q_{\pi}(s,a) + (1-\epsilon) \sum_{a} \frac{\pi(a|s)-\frac{\epsilon}{|A(s)|}}{1-\epsilon} q_{\pi}(s,a) \cr
+			       & = \frac{\epsilon}{|A(s)|}\sum_{a} q_{\pi}(s,a) - \frac{\epsilon}{|A(s)|}\sum_{a} q_{\pi}(s,a) + \sum_{a} \pi(a|s) q_{\pi}(s,a) \cr
 			       & = v_{\pi}(s)
 }
 }
