@@ -12,7 +12,9 @@ category: Study
 > _Monte Carlo methods are ways of solving the reinforcement learning problem based on averaging sample returns._
 
 + Monte Carlo Prediction
+	
 	+ First-visit MC: It estimates $v_{\pi}(s)$ as the average of the returns following first visits to $s$.
+	
 	![](/Figs/RL_Sutton/Ch5/FirstVisitMC.jpg)
 	
 	+ Every-visit MC: It averages the returns following all visits to $s$.
@@ -29,7 +31,9 @@ category: Study
 
 
 + Monte Carlo Control
+
 ![](/Figs/RL_Sutton/Ch5/GPIMC.jpg)
+
 $$
 \small{
 \eqalign{ 
