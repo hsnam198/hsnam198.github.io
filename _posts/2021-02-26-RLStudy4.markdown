@@ -31,13 +31,12 @@ category: Study
 ![](/Figs/RL_Sutton/Ch5/GPIMC.jpg){: width="100%" height="100%"}
 
 $$
-\begin{split} 
-{\small q_{\pi_{k}}(s,\pi_{k+1}(s)) & = q_{\pi_{k}}(s,\argmax q_{\pi_{k}}(s,a)) \\
+{\split 
+q_{\pi_{k}}(s,\pi_{k+1}(s)) & = q_{\pi_{k}}(s,\argmax q_{\pi_{k}}(s,a)) \\
 			       & = \underset{a}{\max} q_{\pi_{k}}(s,a) \\
 			       & \geq q_{\pi_{k}}(s,\pi_{s}) \\
 			       & \geq v_{\pi_{k}}(s)
 }
-\end{split}
 $$
 
 ![](/Figs/RL_Sutton/Ch5/MCES.jpg){: width="100%" height="100%"}
