@@ -16,7 +16,8 @@ category: Study
 	![](/Figs/RL_Sutton/Ch5/FirstVisitMC.jpg){: width="100%" height="100%"}
 	
 	+ Every-visit MC: It averages the returns following all visits to $s$.
-> _Every-visit MC is less straightforward, but its estimates also converge quadratically to $v_{\pi}(s)._
+
+	> _Every-visit MC is less straightforward, but its estimates also converge quadratically to $v_{\pi}(s)$._
 
 + Monte Carlo Estimation of Action Values
 
@@ -44,3 +45,23 @@ $$
 ![](/Figs/RL_Sutton/Ch5/MCES.jpg){: width="100%" height="100%"}
 
 + Monte Carlo Control without Exploring Starts
+	+ On-policy: It evaluates or improves the policy that is used to make decisions.
+	
+	+ Off-policy: It evaluates or improves the poicy different from that used to generate the data. 
+	
+	+ $\epsilon$-soft policy: on-policy
+
+	![](/Figs/RL_Sutton/Ch5/MCwoES.jpg){: width="100%" height="100%"}
+$$
+\small{
+\eqalign{ 
+q_{\pi}(s,{\pi}'}(s)) & = \sum_{a} {\pi}'(a|s)q_{\pi}(s,a) \cr
+			       & = \frac{\epsilon}{|A(s)|}\sum_{a} {\pi}'(a|s)q_{\pi}(s,a) + (1-\epsilon) \underset{a}{\max}q_{\pi}(s,a) \cr
+			       & \geq \frac{\epsilon}{|A(s)|}\sum_{a} {\pi}'(a|s)q_{\pi}(s,a) + (1-\epsilon) \sum_{a} \frac{\pi(a|s)-\frac{\epsilon}{|A(s)|}}{1-\epsilon} q_{\pi}(s,a) \cr
+			       & = \frac{\epsilon}{|A(s)|}\sum_{a} {\pi}'(a|s)q_{\pi}(s,a) - \frac{\epsilon}{|A(s)|}\sum_{a} {\pi}'(a|s)q_{\pi}(s,a) + \sum_{a} \pi(a|s) q_{\pi}(s,a) \cr
+			       & = v_{\pi}(s)
+}
+}
+$$
+
+
