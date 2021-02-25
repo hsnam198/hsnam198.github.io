@@ -1,0 +1,45 @@
+---
+layout: post
+title: Reinforcement Learning Study 4
+date: 2021-02-26 17:00:00 +0900
+category: Study 
+---
+#### Textbook: Reinforcement Learning: An Introduction - Sutton and Barto
+
+# Chapter 5. Monte Carlo Methods
+> _Monte Carlo methods require only exprerience - sample sequences of states, actions, and rewards from actual or simulated interaction with an environment. Learning from actual experience is striking because it requires no prior knowledge of the environment's dynamics, yet can still attain optimal behavior._
+
+> _Monte Carlo methods are ways of solving the reinforcement learning problem based on averaging sample returns._
+
++ Monte Carlo Prediction
+	+ First-visit MC: It estimates $v_{\pi}(s)$ as the average of the returns following first visits to $s$.
+	![](/Figs/RL_Sutton/Ch5/FirstVisitMC.jpg){: width="100%" height="100%"}
+	
+	+ Every-visit MC: It averages the returns following all visits to $s$.
+> _Every-visit MC is less straightforward, but its estimates also converge quadratically to $v_{\pi}(s)._
+
++ Monte Carlo Estimation of Action Values
+
+> _If a model is not available, then it is particularly useful to estimate action values rather than state values.
+
+> _If $\pi$ is a deterministic policy, then in following $\pi$ one will observe returns only for one of the actions from each state. With no returns to average, the Monte Carlo estimates of the other actions will not improve with experience._
+
+> _The assumption of exploring starts is sometimes useful, but of course it cannot be relied upon in general, particularly when learning directly from actual interaction with an environment. The most common alternative approach to assuring that all state-action pairs are encountered is to consider only policies that are stochastic with a nonzero probability of selecting all actions in each state._
+
+
++ Monte Carlo Control
+![](/Figs/RL_Sutton/Ch5/GPIMC.jpg){: width="100%" height="100%"}
+
+$$
+\begin{split} 
+{\small q_{\pi_{k}}(s,\pi_{k+1}(s)) & = q_{\pi_{k}}(s,\argmax q_{\pi_{k}}(s,a)) \\
+			       & = \underset{a}{\max} q_{\pi_{k}}(s,a) \\
+			       & \geq q_{\pi_{k}}(s,\pi_{s}) \\
+			       & \geq v_{\pi_{k}}(s)
+}
+\end{split}
+$$
+
+![](/Figs/RL_Sutton/Ch5/MCES.jpg){: width="100%" height="100%"}
+
++ Monte Carlo Control without Exploring Starts
