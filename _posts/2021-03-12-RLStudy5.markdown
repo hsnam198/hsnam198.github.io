@@ -33,13 +33,14 @@ category: Study
 
 + Optimality of TD(0)
 
-> _Given an approximate value function, V, the increments are computed for every time step t at wich a nonterminal state is visited, but the value function is changed only onces, by the sum of all the increments. Then all the available experience is processed again with the new value function to produce a new overall increment, and so on, until the value function converges. We call this batch updating because updates are made only after processing each complete batch of training data._
-
 	+ MC: Minimize the mean square error
 
 	+ TD: Maximum-likelihood estimate.
 
 	+ TD methods converge more quickly than MC methods. 
+
+> _Given an approximate value function, V, the increments are computed for every time step t at wich a nonterminal state is visited, but the value function is changed only onces, by the sum of all the increments. Then all the available experience is processed again with the new value function to produce a new overall increment, and so on, until the value function converges. We call this batch updating because updates are made only after processing each complete batch of training data._
+
 
 + Sarsa: On-Policy TD Control
 
@@ -57,8 +58,8 @@ $$ \small{Q(S_{t},A_{t}) \leftarrow Q(S_{t},A_{t}) + \alpha[R_{t+1}+\gamma \unde
 
 $$ \small{
 \eqalign{
-Q(S_{t},A_{t}) & \leftarrow Q(S_{t},A_{t}) + \alpha[R_{t+1}+\gamma \mathbb{E}[Q(S_{t+1},A_{t+1}|S_{t})]-Q(S_{t},A_{t})]} \cr
-	    & \leftarrow Q(S_{t},A_{t}) + \alpha[R_{t+1}+\gamma \sum_{a} \pi (a|S_{t+1})Q(S_{t+1},a)-Q(S_{t},A_{t})]}
+Q(S_{t},A_{t}) & \leftarrow Q(S_{t},A_{t}) + \alpha[R_{t+1}+\gamma \mathbb{E}[Q(S_{t+1},A_{t+1}|S_{t})]-Q(S_{t},A_{t})] \cr
+	    & \leftarrow Q(S_{t},A_{t}) + \alpha[R_{t+1}+\gamma \sum_{a} \pi (a|S_{t+1})Q(S_{t+1},a)-Q(S_{t},A_{t})]}}
 
 $$	
 
