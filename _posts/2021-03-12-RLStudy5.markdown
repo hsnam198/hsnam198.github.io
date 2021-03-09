@@ -27,7 +27,7 @@ category: Study
 
 	+ Over MC: Online implemenation is possible 
 
-	> _In practice, TD methods have usually been found to converge faster than constant-\alpha MC methods on stochastic tasks._
+	> _In practice, TD methods have usually been found to converge faster than constant-$\alpha$ MC methods on stochastic tasks._
 
 	![](/Figs/RL_Sutton/Ch6/RandomWalk.jpg)
 
