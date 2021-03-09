@@ -1,0 +1,70 @@
+---
+layout: post
+title: Reinforcement Learning Study 5
+date: 2021-03-12 17:00:00 +0900
+category: Study 
+---
+#### Textbook: Reinforcement Learning: An Introduction - Sutton and Barto
+
+# Chapter 6. Temporal-Difference Learning
+> _TD learning is a combination of Monte Carlo ideas and dynamic programming (DP) ideas. Like MC methods, TD methods can learn directly from raw experience without a model of the environment's dynamics. Like DP, TD methods update estimates based in part on other learned estimates, without waiting for a final outcome (they bootstrap)._
+
++ TD Prediction
+	
+	+ Every-visit MC update
+
+	$$ \small{V(S_{t}) \leftarrow V(S_{t}) + \alpha [G_{t}-V(S_{t})]} $$	
+	
+	+ One-step TD (TD(0)) update: _Bootstrapping method_
+
+	$$ \small{V(S_{t}) \leftarrow V(S_{t}) + \alpha [R_{t+1}+\gamma V(S_{t})-V(S_{t})]} $$	
+	
+	![](/Figs/RL_Sutton/Ch6/TD0.jpg)
+
++ Advantages of TD Prediction Methods
+
+	+ Over DP: No requirement on a model
+
+	+ Over MC: Online implemenation is possible 
+
+	> _In practice, TD methods have usually been found to converge faster than constant-\alpha MC methods on stochastic tasks._
+
+	![](/Figs/RL_Sutton/Ch6/RandomWalk.jpg)
+
++ Optimality of TD(0)
+
+> _Given an approximate value function, V, the increments are computed for every time step t at wich a nonterminal state is visited, but the value function is changed only onces, by the sum of all the increments. Then all the available experience is processed again with the new value function to produce a new overall increment, and so on, until the value function converges. We call this batch updating because updates are made only after processing each complete batch of training data._
+
+	+ MC: Minimize the mean square error
+
+	+ TD: Maximum-likelihood estimate.
+
+	+ TD methods converge more quickly than MC methods. 
+
++ Sarsa: On-Policy TD Control
+
+$$ \small{Q(S_{t},A_{t}) \leftarrow Q(S_{t},A_{t}) + \alpha [R_{t+1}+\gamma Q(S_{t+1},A_{t+1})-Q(S_{t},A_{t})]} $$	
+
+![](/Figs/RL_Sutton/Ch6/Sarsa.jpg)
+
++ Q-learning: Off-Policy TD Control
+
+$$ \small{Q(S_{t},A_{t}) \leftarrow Q(S_{t},A_{t}) + \alpha[R_{t+1}+\gamma \underset{a}{\max}Q(S_{t+1},a)-Q(S_{t},A_{t})]} $$	
+
+![](/Figs/RL_Sutton/Ch6/Qlearn.jpg)
+
++ Expected Sarsa
+
+$$ \small{
+\eqalign{
+Q(S_{t},A_{t}) & \leftarrow Q(S_{t},A_{t}) + \alpha[R_{t+1}+\gamma \mathbb{E}[Q(S_{t+1},A_{t+1}|S_{t})]-Q(S_{t},A_{t})]} \cr
+	    & \leftarrow Q(S_{t},A_{t}) + \alpha[R_{t+1}+\gamma \sum_{a} \pi (a|S_{t+1})Q(S_{t+1},a)-Q(S_{t},A_{t})]}
+
+$$	
+
+![](/Figs/RL_Sutton/Ch6/ExSarsa.jpg)
+
++ Backup Diagrams
+
+![](/Figs/RL_Sutton/Ch6/Backup.jpg)
+
